@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afrotrade Corporation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style>
+
+  /* Loader overlay */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+      transition: opacity 0.6s ease, visibility 0.6s;
+    }
+
+    /* Bouncing dots container */
+    .dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background: orange;
+      border-radius: 50%;
+      animation: bounce 0.6s infinite alternate;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+        opacity: 0.7;
+      }
+      to {
+        transform: translateY(-15px);
+        opacity: 1;
+      }
+    }
+
+    /* Hide loader */
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    /* Page content */
+    .content {
+      display: none;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .content.show {
+      display: block;
+    }
+
+    /* Optional text below loader */
+    #loader p {
+      margin-top: 20px;
+      ;
+      color: #444;
+    }
+    
+.guid{
+    margin-bottom: 6rem;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+@media screen and (max-width: 58rem){
+    .guid{
+        flex-direction: column;
+    }
+}
+
+.name-svg h1{
+    font-size: 60px;
+    color: whitesmoke;
+}
+ .intro-info{ 
+    display: grid;
+    grid-template-columns:
+     repeat(auto-fit, minmax(300px,4fr));
+    flex-wrap: wrap;
+    justify-content : space-evenly;
+    }
+
+.svg-info{ 
+    display: grid;
+    grid-template-columns:
+     repeat(auto-fit, minmax(300px,2fr));
+    flex-wrap: wrap;
+    justify-content : space-evenly;
+
+}
+.font-rich-text-text{
+    padding: 3%;
+    font-size: 70px ;
+    color: whitesmoke;
+}
+.the_of_svg-024-animation-pic-our-info-button{
+    background-color: orange;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+[data-mesh-id=comp-lpqqssjuinlineContent] {
+    height: auto;
+    width: 100%;
+}
+[data-mesh-id=comp-lpqqbkw4inlineContent-gridContainer] {
+    position: static;
+    display: grid;
+    height: auto;
+    width: 50%;
+    min-height: auto;
+    color: linear-gradient(45deg, #d5d5e7f3, #dcdfe7);
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 50%;
+}
+
+#comp-lpqqu2of:not(.is-animating) {
+    transition: all 0.4s ease-out 0s, visibility 0s;
+    --transition: all 0.4s ease-out 0s, visibility 0s;
+}
+@media (prefers-reduced-motion: no-preference) {
+    #comp-lpqqu2of:not([data-motion-enter="done"]) {
+        opacity: var(--comp-opacity, 1);
+    }
+}
+
+.cards {
+    color: whitesmoke;
+    border-radius: 10px;
+    border-color: whitesmoke;
+    overflow: hidden;
+    box-shadow:1px 1px 8px rgba(245, 245, 243, 0.589);
+    transition: transform 0.3s ease-in-out;
+    padding: 5%;
+    margin: 10px;
+    gap: 5%;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+}
+
+
+.card-content {
+    padding: 2px;
+}
+
+       .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+       .container2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .text h2 { 
+          align-items: center;
+          font-size: 2rem;
+          color: #333;
+        }
+
+        .text p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .image img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .container1 {
+                flex-direction: column;
+                text-align: center;
+            }
+            .container2 {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+        }
+
+
+    .mainbody{
+        background: linear-gradient(45deg, #f7f6f6, #f3f1f1);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        padding: 20px;
+        margin: 50px auto;
+        border-radius: 10px;
+        }
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .vision {
+      grid-column: span 2; /* Full width on top */
+    }
+    .visions {
+      grid-column: span 2; /* Full width on top */
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .text {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+      .bento-grid {
+        grid-template-columns: 1fr;
+      }
+      .vision {
+        grid-column: span 1;
+      }
+      .visions{
+        grid-column: span 1;
+      }
+    }
+    .font-rich-text-text{
+    font-size: 80px;
+    color: rgba(0, 0, 255, 0.842)
+}
+@media screen and (max-width: 58rem){
+     .font-rich-text-text{ 
+        font-size: 50px;
+     }
+}
+
+.sectag-hero-tag{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.intro-info{ 
+    display: grid;
+    grid-template-columns:
+     repeat(auto-fit, minmax(300px,4fr));
+    flex-wrap: wrap;
+    justify-content : space-evenly;
+
+}
+
+.svg-info{ 
+    display: grid;
+    grid-template-columns:
+     repeat(auto-fit, minmax(300px,2fr));
+    flex-wrap: wrap;
+    justify-content : space-evenly;
+
+}
+
+[data-mesh-id=comp-lpqqssjuinlineContent] {
+    height: auto;
+    width: 100%;
+}
+[data-mesh-id=comp-lpqqbkw4inlineContent-gridContainer] {
+    position: static;
+    display: grid;
+    height: auto;
+    width: 50%;
+    min-height: auto;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 50%;
+}
+
+#comp-lpqqu2of:not(.is-animating) {
+    transition: all 0.4s ease-out 0s, visibility 0s;
+    --transition: all 0.4s ease-out 0s, visibility 0s;
+}
+@media (prefers-reduced-motion: no-preference) {
+    #comp-lpqqu2of:not([data-motion-enter="done"]) {
+        opacity: var(--comp-opacity, 1);
+    }
+}
+   
+
+/* Hide text initially */
+.topcard{
+    opacity: 0;
+    display: inline-block;
+    animation: fadeIn 2s forwards;
+}
+.topcard {
+    color: rgb(248, 227, 195);
+    border-radius: 10px;
+    border-color: whitesmoke;
+    overflow: hidden;
+    box-shadow:1px 1px 8px rgba(245, 245, 243, 0.589);
+    transition: transform 0.3s ease-in-out;
+    padding: 5%;
+    margin: 10px;
+    gap: 5%;
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Delay each span to create a staggered effect */
+.topcard:nth-child(1) {
+    animation-delay: 3s;
+}
+
+.topcard:nth-child(2) {
+    animation-delay: 4s;
+}
+.topcard:nth-child(3) {
+    animation-delay: 5s;
+}
+
+.tag-care-service-value{
+    background-color: #BCC5F2;
+   
+    align-items: center;
+    height: 100svh;
+
+}
+.scriptt-tage4452-hht-skk{
+    display: flex;
+    gap: 2%;
+    }
+
+
+
+  footer {
+      z-index: 1rem; 
+      background: orange;/* Orange background */
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-section h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-section p, 
+    .footer-section a {
+      font-size: 0.9rem;
+      color: #fff;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      border-top: 1px solid #fff;
+      padding-top: 15px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+  </style>
+    <!-- Loader -->
+  <div id="loader">
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+  <!-- Navbar -->
+     <header class="header">
+        <a href="#" style="display: flex; align-items: center; text-decoration: none;">
+           <img src="images/afrotrade_LOGO-removebg-preview 1.svg" alt="afrotrade-logo" style="height:60px;" >
+        </a>
+       <div class="menu-toggle">
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+       </div>
+       <nav>
+           <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#Our About">About </a></li>
+               <li><a href="#Our Product">Products </a></li>
+               <li><a href="#Contact Us">Contacts</a></li>
+           </ul>
+       </nav>
+   </header>
+
+  <!-- Hero section -->
+  <div class="hero" style="background-image: url(images/Gemini_Generated_Image_c2ofzqc2ofzqc2of.png); background-size: cover; background-position: center; background-repeat: no-repeat;background-blend-mode: multiply;
+              width: 100%; margin: 0;">
+    <h1  style="padding-top: 10rem; color: #fff;">Afrotrade Corporation</h1>
+    <p style="color: #fff;">Delivering reliable, high-quality energy and agricultural 
+      <br> products across Africa</p>
+  
+    <div class="buttons">
+      <button class="btn primary">learn more</button>
+      <button class="btn outline">contact us</button>
+    </div>
+  
+    <!-- Orange wave -->
+    <div class="wave">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+        <path d="M0.00,49.98 C150.00,150.00 349.93,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="section" style="display: flex; justify-content: center;">
+    <div class="bento-grid">
+      <div class="card vision">
+        <div class="title">Our Vision</div>
+        <div class="text">
+          To become a leading regional supplier of energy and agricultural solutions, recognized for excellence,
+         </div>
+      </div>
+      <div class="card">
+        <div class="title">Why Choose Afrotrade</div>
+        <div class="text">
+          <li> Licensed and compliant with all regulatory bodies</li>
+          <li>Strategic location in Lusaka's Light Industrial Area for efficient distribution</li>
+          <li> Diversified portfolio bridging both energy and agriculture</li>
+          <li>Strong commitment to quality, safety, and sustainability</li>
+          <li> A trusted partner for businesses, industries, and communities across Zambia</li>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="title">Our Mission</div>
+        <div class="text">
+          To deliver reliable, high-quality energy and agricultural products<br/> that fuel growth, enhance trade, and create
+          value for communities, partners, and stakeholders.
+        </div>
+      </div>
+      <div class="card visions">
+        <div class="title">Our Infro</div>
+        <div class="text">
+          <p> Afrotrade Corporation Limited is a diversified
+            trading and distribution company strategically
+            positioned at Plot 13969, Chandwe Musonda
+            Road, Light Industrial Area, Lusaka, Zambia.
+            The company operates across two vital sectors –
+            energy and agriculture – supplying high-quality
+            petroleum products, industrial oils, chemicals, and
+            agricultural commodities to both domestic and
+            regional markets.
+            Fully licensed by the Energy Regulation Board
+            (ERB), Afrotrade ensures compliance, safety, and
+            quality in all its energy-related operations. On the
+            agricultural front, the company plays a key role in
+            strengthening food security and supporting value
+            chains that link farmers, industries, and markets
+            across Zambia and beyond</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="the_of_svg-024-animation-pic-our-info-button">
+      <div class="guid ">
+        <div class="name-svg">
+          <h1>Our Core Value ?</h1>
+          <p style="color: #fff;">The principles that guide everything we do at Afrotrade</p>
+  
+        </div>
+        <div class="svg-info">
+  
+          <div class="cards">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/yxczfiyc.json" trigger="hover" colors="primary:#ffffff"
+              style="width:60px;height:60px">
+            </lord-icon>
+  
+            <h3>
+              Integrity
+            </h3>
+            <span>
+              Upholding trust,transparency, and
+              accontability in all business dealing
+            </span>
+          </div>
+          <div class="cards">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/ciawvzjk.json" trigger="hover" colors="primary:#ffffff"
+              style="width:60px;height:60px">
+            </lord-icon>
+            <h3>
+              Excellence
+            </h3>
+            <span>
+              Delivering products and services
+              are services that exceed industry
+              standards.
+            </span>
+  
+          </div>
+          <div class="cards">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/whrxobsb.json" trigger="hover" colors="primary:#ffffff"
+              style="width:60px; height:60px">
+            </lord-icon>
+            <h3>
+              Innovation
+            </h3>
+            <span>
+              Continuously adapting to meet
+              the evoling need of our market
+            </span>
+          </div>
+          <div class="cards">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/pflszboa.json" trigger="hover" colors="primary:#ffffff"
+              style="width:60px;height:60px">
+            </lord-icon>
+            <h3>
+              Sustainability
+            </h3>
+            <span>
+              Promoting environmentally responsible
+              practices and long-term growth
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mainbody">       
+
+    <div class="" style="margin-top: 7rem; margin-bottom: 3rem; align-content: center;">
+      <div class=""></div>
+      <h1 style="display: flex; justify-content: center; ">Our Products</h1>
+      <p style="display: flex; justify-content: center; text-align: center;" >Delivering reliable, high-quality energy and agriculturalproducts across Africa</p>
+      
+    </div>
+    <div class="container1">
+  
+      <div class="text">
+        <h1 class="">
+          <span style=" font-style: bold; color: rgb(6, 255, 6);">Agricultural</span> Products
+        </h1><p1 style="color: #474747;">
+          Afrotrade supports the agricultural
+          sector through the supply and
+          distribution of key commodities,
+          including:</p1>
+        <div class="lists" style="text-align: start; padding: 2% 15%;">
+           <li>Fertiliser.</li>
+           <li>Tobacco.</li>
+           <li>Grains: Maize, Wheat, Rice,Sorghum, Barley, Millet.</li>
+           <li>Legumes: Soya Beans,Groundnuts, Cowpeas, Lentils,Beans,Chickpeas</li>
+           <li>Timber.</li>   
+        </div>
+
+      </div>
+      <div class="image">
+        <img src="images/farming1.jpg" alt="Sample Image">
+      </div>
+    </div>
+    <div class="container2">
+      <div class="image">
+        <img src="images/oil-refinery-in-oil-and-gas-industry.png"  alt="Sample Image">
+      </div>
+      <div class="text">
+        <h1>
+          <span style="color: rgb(20, 20, 209);">Oils&Energy</span> Products
+        </h1>
+        <p1 style="color: #474747;">
+          Afrotrade provides a wide rangeof petroleum and industrial
+          products, including:
+        </p1>
+        <div class="lists" style="text-align: start; padding: 2% 15%;">
+         <li >Liquid Petroleum Gas(LPG).</li>
+         <li>Petrol.</li>
+         <li>Gas Oil(Diesel).</li>
+         <li>Heavy Fuel Oils.</li>
+         <li>Industrial Kerosene.</li>
+         <li>Asphalt/Bitumen,Industrial Oils.</li>
+         <li>Sulfur and Sulfuric Acid.</li>
+        </div>
+        
+      </div>
+    </div>
+  <div class="">
+    <h1 style="display: flex; justify-content: center;
+         margin-top: 3rem; margin-bottom: 2rem;">
+      About Us
+    </h1>
+  </div>
+
+    <div class="sectag-hero-tag">
+      <div id="comp-lpqqge1e" class="HcOXKn c9GqVL QxJLC3 comp-lpqqge1e wixui-rich-text" data-testid="richTextElement" style=" margin-top: 6rem ; margin-bottom: 3rem;">
+        <h1 class="" style="display: flex; justify-content: center; color: orange;">
+          Contact us. 
+        </h1>
+        <p style="display: flex; justify-content: center;">Get in touch with us for all your energy and agricultural product needs</p>
+      </div>
+      <div data-testid="columns" class="column-V5AUxf">
+        <div class="intro-info">
+          <div class="topcard">
+            <h2 class="font_5 wixui-rich-text__text" style="font-size:24px;">
+              <span class="color_45 wixui-rich-text__text">
+                <span style="font-size:24px; color: rgb(51, 49, 49);" class="wixui-rich-text__text">
+                  Address
+                </span>
+              </span>
+            </h2>
+            <p style="font-size:15px; color: rgb(48, 42, 42);">
+              <span class="color_15 wixui-rich-text__text">
+                 Plot 13969, Chandwe<br> 
+                 Musonda Road,Light <br>
+                 Industrial Area Lusaka, Zambia.
+              </span>
+            </p>
+          </div>
+          <div class="topcard">
+            <h2 class="font_5 wixui-rich-text__text" style="font-size:24px;">
+              <span class="color_45 wixui-rich-text__text">
+                <span style="font-size:24px; color: rgb(43, 41, 41);" class="wixui-rich-text__text">
+                  Telephone
+                </span>
+              </span>
+            </h2>
+  
+            <p style="font-size:15px; color: rgb(46, 41, 41);">
+              <span class="color_15 wixui-rich-text__text">
+                 +260 211 250 420
+              </span>
+            </p>
+          </div>
+          <div class="topcard">
+            <h2 class="font_5 wixui-rich-text__text" style="font-size:24px;">
+              <span class="color_45 wixui-rich-text__text">
+                <span style="font-size:24px; color: rgb(51, 47, 47);" class="wixui-rich-text__text">
+                  Email
+                </span>
+              </span>
+            </h2>
+            <p style="font-size:15px; color: rgb(46, 41, 41);">
+              <span class="color_15 wixui-rich-text__text">
+                 info@afrotradecorp.com
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <section>
+    <footer>
+    <div class="footer-container">
+      <!-- Left -->
+      <div class="footer-section">
+        <img src="" alt="">
+        <h3>Afrotrade </h3>
+        <p>Delivering reliable, high-quality energy and agricultural products 
+        that fuel growth and create value across Africa.</p>
+      </div>
+
+      <!-- Middle -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Products</a></p>
+        <p><a href="#">Contact</a></p>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p>Plot 13969, Chandwe Musonda Road</p>
+        <p>Light Industrial Area, Lusaka</p>
+        <p>Tel: +260 211 250 420</p>
+        <p>Email: info@afrotradecorp.com</p>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      © 2025 Afrotrade Corporation Limited. All rights reserved.
+    </div>
+  </footer>
+  </section>
+  <script src="script.js"></script>
+  <script>
+    // Wait for the page to load fully
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const content = document.querySelector(".content");
+
+      // Hide loader
+      loader.classList.add("hidden");
+
+      // Show content after loader transition
+      setTimeout(() => {
+        content.classList.add("show");
+      }, 5000);
+    });
+  </script>
+  <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
+        }); 
+  </script>
+  <script>
+    const sections = document.querySelectorAll(".page-div");
+    const navLinks = document.querySelectorAll(".navbar a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 60; // offset for navbar
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
