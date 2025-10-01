@@ -306,7 +306,7 @@
             padding: 3rem;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border-left: 5px solid #f39c12;
+            border-left: 3px solid #f39c12;
         }
 
         .why-content p {
@@ -326,8 +326,8 @@
       margin-top: 100px;
     }
     .card{
-      height: 25rem;
-      width: 30rem;
+      height: 29rem;
+      width: 27rem;
       background-color: #ffffff ;
       border-radius: 8px;
       overflow: hidden;
@@ -337,6 +337,13 @@
     .card-content{
       padding: 2rem;
     }
+     @media (max-width: 768px) {
+      .card{
+      height: 30rem;
+      }
+      .card-content{
+      padding:1.7rem;}
+     }
     /* Card-containers */ 
     .card-Containers{
       display: flex;
@@ -588,7 +595,7 @@
     <p style="display: flex; justify-content: center; text-align: center; color: #333;" >Delivering reliable, high-quality energy and agriculturalproducts across Africa</p>
     <div class="card-container">
       <div class="card">
-        <img src="" alt="" >
+       <div class=""><img src="images/tim-mossholder-xDwEa2kaeJA-unsplash(1).jpg" alt="" ></div> 
         <div class="card-content">
           <h3><span style=" font-style: bold; color: rgb(6, 255, 6);">Agricultural</span> Products</h3>
           <p>
@@ -596,7 +603,7 @@
           sector through the supply and
           distribution of key commodities,
           including:
-          <ul style="padding: 20px;">
+          <ul style="padding: 15px;">
            <li>Fertiliser.</li>
            <li>Tobacco.</li>
            <li>Grains: Maize, Wheat, Rice,Sorghum, Barley, Millet.</li>
@@ -607,13 +614,13 @@
         </div>
       </div>
       <div class="card">
-        <img src="" alt="" width="">
+        <div class=""><img src="images/patrick-hendry-6xeDIZgoPaw-unsplash.jpg" alt="" width=""></div>
         <div class="card-content">
           <h3><span style="color: rgb(20, 20, 209);">Oils & Energy</span> Products</h3>
           <p>
           Afrotrade provides a wide range of petroleum and industrial
           products, including:
-          <ul style="padding: 20px;">
+          <ul style="padding: 15px;">
              <li >Liquid Petroleum Gas(LPG).</li>
              <li>Petrol.</li>
              <li>Gas Oil(Diesel).</li>
@@ -633,10 +640,16 @@
     </h1>
     <div class="Contact" >
       <div class="cards-contact" >
-      
         <div class="card-content" >
+          <script src="https://cdn.lordicon.com/lordicon.js"></script>
+          <lord-icon
+             src="https://cdn.lordicon.com/onmwuuox.json"
+             trigger="hover"
+             colors="primary:#ffffff,secondary:#ffffff"
+            style="width:80px;height:80px">
+          </lord-icon>
           <h2>
-            <span> Address.</span>
+            <span style="color: #fff;"> Address.</span>
           </h2>
             <span style="color: #fff;">
               Plot 13969, Chandwe<br> 
@@ -648,7 +661,14 @@
       </div>
       <div class="cards-contact">          
         <div class="card-content">
-          <h2>
+          <script src="https://cdn.lordicon.com/lordicon.js"></script>
+           <lord-icon
+              src="https://cdn.lordicon.com/wtywrnoz.json"
+              trigger="hover"
+              colors="primary:#ffffff"
+              style="width:80px;height:80px">
+              </lord-icon>
+          <h2 style="color: #fff;">
               <span style="color: #fff;"></span>Telephone.
           </h2>
             <span style="color: #fff;">
@@ -657,8 +677,9 @@
         </div>
       </div>
       <div class="cards-contact">
-           
+        
         <div class="card-content">
+          
           <h2>
             <span style="color: #fff;">Email.</span>
              
